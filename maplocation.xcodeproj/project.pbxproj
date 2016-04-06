@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5701A1191CA817AE00E0EDAD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5701A1181CA817AE00E0EDAD /* MapViewController.swift */; };
+		5701A11B1CA817CE00E0EDAD /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5701A11A1CA817CE00E0EDAD /* LocationViewController.swift */; };
+		5701A11D1CA8182700E0EDAD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5701A11C1CA8182700E0EDAD /* MapKit.framework */; };
 		570F2A2F1CA7C3F3004BC1F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570F2A2E1CA7C3F3004BC1F3 /* AppDelegate.swift */; };
 		570F2A311CA7C3F3004BC1F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 570F2A301CA7C3F3004BC1F3 /* ViewController.swift */; };
 		570F2A341CA7C3F3004BC1F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 570F2A321CA7C3F3004BC1F3 /* Main.storyboard */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5701A1181CA817AE00E0EDAD /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		5701A11A1CA817CE00E0EDAD /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		5701A11C1CA8182700E0EDAD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		570F2A2B1CA7C3F3004BC1F3 /* maplocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = maplocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		570F2A2E1CA7C3F3004BC1F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		570F2A301CA7C3F3004BC1F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5701A11D1CA8182700E0EDAD /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,7 @@
 		570F2A221CA7C3F3004BC1F3 = {
 			isa = PBXGroup;
 			children = (
+				5701A11C1CA8182700E0EDAD /* MapKit.framework */,
 				570F2A2D1CA7C3F3004BC1F3 /* maplocation */,
 				570F2A2C1CA7C3F3004BC1F3 /* Products */,
 			);
@@ -63,6 +71,8 @@
 				570F2A3A1CA7C3F3004BC1F3 /* LaunchScreen.storyboard */,
 				570F2A3D1CA7C3F3004BC1F3 /* Info.plist */,
 				570F2A351CA7C3F3004BC1F3 /* maplocation.xcdatamodeld */,
+				5701A1181CA817AE00E0EDAD /* MapViewController.swift */,
+				5701A11A1CA817CE00E0EDAD /* LocationViewController.swift */,
 			);
 			path = maplocation;
 			sourceTree = "<group>";
@@ -99,6 +109,12 @@
 				TargetAttributes = {
 					570F2A2A1CA7C3F3004BC1F3 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 4QX528523R;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -138,9 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5701A11B1CA817CE00E0EDAD /* LocationViewController.swift in Sources */,
 				570F2A311CA7C3F3004BC1F3 /* ViewController.swift in Sources */,
 				570F2A371CA7C3F3004BC1F3 /* maplocation.xcdatamodeld in Sources */,
 				570F2A2F1CA7C3F3004BC1F3 /* AppDelegate.swift in Sources */,
+				5701A1191CA817AE00E0EDAD /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,10 +271,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = maplocation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.cgua.maplocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -264,10 +285,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = maplocation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.cgua.maplocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -290,6 +314,7 @@
 				570F2A421CA7C3F3004BC1F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
